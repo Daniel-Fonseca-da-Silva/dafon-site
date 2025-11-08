@@ -49,9 +49,9 @@ export const CompanyModal = ({ isOpen, onClose }: CompanyModalProps) => {
                   <Image
                     src="/logo-white.png"
                     alt="Dafon Logo"
-                    width={200}
-                    height={67}
-                    className="h-12 md:h-16 w-auto"
+                    width={300}
+                    height={100}
+                    className="h-16 md:h-24 w-auto"
                   />
                 </div>
               </CardHeader>

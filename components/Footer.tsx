@@ -9,9 +9,9 @@ export const Footer = () => {
         <Image
           src="/logo-white.png"
           alt="Dafon Logo"
-          width={100}
-          height={33}
-          className="h-6 md:h-8 w-auto"
+          width={150}
+          height={50}
+          className="h-8 md:h-12 w-auto"
         />
         <p className="text-xs md:text-sm text-foreground/60 text-center md:text-left">
           © {new Date().getFullYear()} Dafon. All rights reserved.
