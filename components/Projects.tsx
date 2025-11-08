@@ -1,0 +1,126 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 },
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+export const Projects = () => {
+  return (
+    <section id="projects" className="py-12 md:py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-8 md:mb-12"
+        >
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4">
+            Our <span className="text-gradient-purple">Projects</span>
+          </h2>
+          <p className="text-base md:text-lg text-foreground/70 max-w-2xl mx-auto">
+            Explore some of our recent work and innovative solutions.
+          </p>
+        </motion.div>
+
+        <motion.div
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12"
+        >
+          <motion.div variants={fadeInUp}>
+            <motion.a
+              href="https://example.com/project1"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="block h-full"
+            >
+              <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer hover:bg-white/10 transition-all">
+                <div className="relative h-64 md:h-80 lg:h-96 bg-linear-to-br from-purple-900/20 to-blue-900/20">
+                  <Image
+                    src="/projects/first-mockup.png"
+                    alt="First Project Mockup"
+                    fill
+                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl md:text-2xl text-foreground flex items-center justify-between gap-2">
+                    <span>Innovative Design Solution</span>
+                    <FaExternalLinkAlt className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-sm md:text-base text-foreground/80 leading-relaxed">
+                    A cutting-edge design solution that combines functionality with aesthetic excellence. 
+                    This project showcases our ability to create user-centric experiences that drive engagement 
+                    and deliver measurable results for our clients. The design emphasises clean interfaces 
+                    and intuitive navigation, ensuring optimal user satisfaction.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </motion.a>
+          </motion.div>
+
+          <motion.div variants={fadeInUp}>
+            <motion.a
+              href="https://example.com/project2"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="block h-full"
+            >
+              <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer hover:bg-white/10 transition-all">
+                <div className="relative h-64 md:h-80 lg:h-96 bg-linear-to-br from-purple-900/20 to-blue-900/20">
+                  <Image
+                    src="/projects/mockup-all-framed.png"
+                    alt="All Framed Mockup"
+                    fill
+                    className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-xl md:text-2xl text-foreground flex items-center justify-between gap-2">
+                    <span>Comprehensive Platform Design</span>
+                    <FaExternalLinkAlt className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-sm md:text-base text-foreground/80 leading-relaxed">
+                    A comprehensive platform design that integrates multiple services and features into a 
+                    seamless user experience. This project demonstrates our expertise in creating scalable 
+                    solutions that adapt to evolving business needs. The platform delivers exceptional 
+                    performance whilst maintaining an elegant and modern aesthetic.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </motion.a>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
