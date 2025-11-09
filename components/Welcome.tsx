@@ -48,9 +48,9 @@ export const Welcome = ({ onLearnMoreClick }: WelcomeProps) => {
                 />
               </div>
               <div className="mt-4 md:mt-6">
-                <h2 className="text-xl md:text-3xl font-bold text-foreground mb-2">
+                <h3 className="text-xl md:text-3xl font-bold text-foreground mb-2">
                   <span className="text-gradient-purple">Daniel Fonseca da Silva</span>
-                </h2>
+                </h3>
                 <p className="text-base md:text-lg text-foreground/70 mb-3 md:mb-4">Chief Executive Officer</p>
                 <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
                   With extensive experience in business strategy and innovation, Daniel leads Dafon 

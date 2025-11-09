@@ -45,7 +45,7 @@ export const Projects = () => {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12"
         >
-          <motion.div variants={fadeInUp}>
+          <motion.article variants={fadeInUp}>
             <motion.a
               href="https://www.dafoncv.online"
               target="_blank"
@@ -58,7 +58,7 @@ export const Projects = () => {
                 <div className="relative h-64 md:h-80 lg:h-96 bg-linear-to-br from-purple-900/20 to-blue-900/20">
                   <Image
                     src="/projects/dafoncv-banner.jpg"
-                    alt="Dafoncv banner image"
+                    alt="Dafoncv - AI-powered CV creation platform developed by Dafon"
                     fill
                     className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -66,8 +66,8 @@ export const Projects = () => {
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl md:text-2xl text-foreground flex items-center justify-between gap-2">
-                    <span>Dafoncv - Creation customized CV With AI</span>
-                    <FaExternalLinkAlt className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <h3>Dafoncv - Creation customized CV With AI</h3>
+                    <FaExternalLinkAlt className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -81,9 +81,9 @@ export const Projects = () => {
                 </CardContent>
               </Card>
             </motion.a>
-          </motion.div>
+          </motion.article>
 
-          <motion.div variants={fadeInUp}>
+          <motion.article variants={fadeInUp}>
             <motion.a
               href="https://github.com/Daniel-Fonseca-da-Silva/Dafon-PDF-Extractor-API"
               target="_blank"
@@ -96,7 +96,7 @@ export const Projects = () => {
                 <div className="relative h-64 md:h-80 lg:h-96 bg-linear-to-br from-purple-900/20 to-blue-900/20">
                   <Image
                     src="/projects/dafon-pdf-extractor-api-banner.jpg"
-                    alt="Dafoncv pdf extractor api banner image"
+                    alt="Dafon PDF Extractor API - Python-based PDF data extraction solution for European market"
                     fill
                     className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -104,8 +104,8 @@ export const Projects = () => {
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl md:text-2xl text-foreground flex items-center justify-between gap-2">
-                    <span>Dafon PDF Extractor - Extract data from PDF</span>
-                    <FaExternalLinkAlt className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <h3>Dafon PDF Extractor - Extract data from PDF</h3>
+                    <FaExternalLinkAlt className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -120,7 +120,7 @@ export const Projects = () => {
                 </CardContent>
               </Card>
             </motion.a>
-          </motion.div>
+          </motion.article>
         </motion.div>
       </div>
     </section>
