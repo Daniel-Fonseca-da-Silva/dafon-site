@@ -122,26 +122,16 @@ export const CompanyModal = ({ isOpen, onClose }: CompanyModalProps) => {
                   </h3>
                   <div className="space-y-4 text-foreground/90 leading-relaxed">
                     <p>
-                      Daniel Fonseca da Silva has built an impressive career spanning over two decades in business 
-                      strategy, innovation, and leadership. His journey began with a strong foundation in business 
-                      administration, where he developed a keen understanding of market dynamics and organisational 
-                      excellence.
+                      Daniel Fonseca da Silva has built an impressive career spanning more than two decades in systems engineering, innovation, and business leadership. His professional journey began in the field of information systems, where he developed deep technical expertise and a strategic vision for how technology can drive business transformation. With a solid background in engineering and system development many projects designed and implemented under his direct guidance, Daniel has established himself as a leader who seamlessly combines technical excellence with forward-thinking strategy.
                     </p>
                     <p>
-                      Throughout his career, Daniel has demonstrated exceptional ability to identify opportunities 
-                      and transform challenges into strategic advantages. He has led numerous successful initiatives 
-                      that have driven significant growth and innovation across various industries, from technology 
-                      to consulting and beyond.
+                      As the CEO of Dafon, Daniel is now at the forefront of the company&apos;s strategic direction, overseeing its evolution and ensuring that technological innovation remains at the heart of all operations. Throughout his career, he has demonstrated exceptional ability to identify opportunities and turn challenges into strategic advantages. He has led numerous successful initiatives that have driven significant growth and innovation across various sectors, from technology to consulting and beyond.
                     </p>
                     <p>
-                      His leadership philosophy centres on fostering collaborative environments where creativity and 
-                      strategic thinking converge. Under his guidance, teams have consistently delivered 
-                      transformative solutions that exceed client expectations and set new industry standards.
+                      His leadership philosophy is centred on fostering collaborative environments where creativity and strategic thinking converge. Under his guidance, teams have consistently delivered transformative solutions that exceed client expectations and set new industry standards.
                     </p>
                     <p>
-                      Daniel&apos;s commitment to excellence and innovation has been instrumental in positioning Dafon 
-                      as a leader in delivering cutting-edge business solutions. His vision extends beyond immediate 
-                      success, focusing on building sustainable, long-term value for clients and stakeholders alike.
+                      Daniel&apos;s commitment to excellence and innovation has been instrumental in positioning Dafon as a leader in delivering cutting-edge business solutions. His vision extends beyond immediate success, focusing on building sustainable, long-term value for clients and stakeholders alike.
                     </p>
                   </div>
                   

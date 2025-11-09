@@ -47,7 +47,7 @@ export const Projects = () => {
         >
           <motion.div variants={fadeInUp}>
             <motion.a
-              href="https://example.com/project1"
+              href="https://www.dafoncv.online"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
@@ -57,8 +57,8 @@ export const Projects = () => {
               <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer hover:bg-white/10 transition-all">
                 <div className="relative h-64 md:h-80 lg:h-96 bg-linear-to-br from-purple-900/20 to-blue-900/20">
                   <Image
-                    src="/projects/first-mockup.png"
-                    alt="First Project Mockup"
+                    src="/projects/dafoncv-banner.jpg"
+                    alt="Dafoncv banner image"
                     fill
                     className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -66,16 +66,17 @@ export const Projects = () => {
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl md:text-2xl text-foreground flex items-center justify-between gap-2">
-                    <span>Innovative Design Solution</span>
+                    <span>Dafoncv - Creation customized CV With AI</span>
                     <FaExternalLinkAlt className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-sm md:text-base text-foreground/80 leading-relaxed">
-                    A cutting-edge design solution that combines functionality with aesthetic excellence. 
-                    This project showcases our ability to create user-centric experiences that drive engagement 
-                    and deliver measurable results for our clients. The design emphasises clean interfaces 
-                    and intuitive navigation, ensuring optimal user satisfaction.
+                    Developed in Portugal by Dafon, this innovative SaaS platform was built from the ground up using cutting-edge 
+                    technologies including Golang and Next.js, following European quality standards and best practices. Designed 
+                    with a robust architecture by our qualified professionals, this project was born from a humanitarian vision 
+                    to empower unemployed individuals and career changers, providing them with the tools they need to create 
+                    professional CVs and access new opportunities in the job market.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -84,7 +85,7 @@ export const Projects = () => {
 
           <motion.div variants={fadeInUp}>
             <motion.a
-              href="https://example.com/project2"
+              href="https://github.com/Daniel-Fonseca-da-Silva/Dafon-PDF-Extractor-API"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
@@ -94,8 +95,8 @@ export const Projects = () => {
               <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer hover:bg-white/10 transition-all">
                 <div className="relative h-64 md:h-80 lg:h-96 bg-linear-to-br from-purple-900/20 to-blue-900/20">
                   <Image
-                    src="/projects/mockup-all-framed.png"
-                    alt="All Framed Mockup"
+                    src="/projects/dafon-pdf-extractor-api-banner.jpg"
+                    alt="Dafoncv pdf extractor api banner image"
                     fill
                     className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, 50vw"
@@ -103,16 +104,18 @@ export const Projects = () => {
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl md:text-2xl text-foreground flex items-center justify-between gap-2">
-                    <span>Comprehensive Platform Design</span>
+                    <span>Dafon PDF Extractor - Extract data from PDF</span>
                     <FaExternalLinkAlt className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-sm md:text-base text-foreground/80 leading-relaxed">
-                    A comprehensive platform design that integrates multiple services and features into a 
-                    seamless user experience. This project demonstrates our expertise in creating scalable 
-                    solutions that adapt to evolving business needs. The platform delivers exceptional 
-                    performance whilst maintaining an elegant and modern aesthetic.
+                    Recognizing a critical need in the European market for robust PDF data processing solutions, Dafon developed 
+                    a comprehensive API built with Python to extract and identify company names, NIFs (Portuguese Tax Identification 
+                    Numbers), and related business data from PDF documents. As a company committed to creating high-quality products 
+                    that adhere to industry standards and best practices, Dafon designed this API with enterprise-grade reliability, 
+                    comprehensive documentation, and complete open access for developers and businesses seeking efficient document 
+                    processing capabilities.
                   </CardDescription>
                 </CardContent>
               </Card>
