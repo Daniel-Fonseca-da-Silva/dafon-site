@@ -72,7 +72,7 @@ export const CompanyModal = ({ isOpen, onClose }: CompanyModalProps) => {
                       Our journey began with a simple yet powerful mission: to deliver exceptional value to our clients 
                       by combining cutting-edge technology with deep industry expertise. Over the years, we have 
                       expanded our presence across multiple continents, establishing offices in São Paulo, Lisboa, 
-                      and strategic partnerships in Buenos Aires and Santiago.
+                      and strategic partnerships in Canada and Toronto.
                     </p>
                     <p>
                       At the heart of Dafon lies our commitment to excellence, innovation, and client success. We 

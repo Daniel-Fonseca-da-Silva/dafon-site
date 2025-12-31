@@ -49,8 +49,8 @@ export const Partners = () => {
             <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer">
               <div className="relative h-40 md:h-48">
                 <Image
-                  src="/company/buenos-aires.jpg"
-                  alt="Buenos Aires, Argentina - Dafon Partner"
+                  src="/company/dafon-toronto.jpg"
+                  alt="Toronto, Canada - Dafon Partner"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
                   sizes="(max-width: 640px) 100vw, 50vw"
@@ -59,12 +59,12 @@ export const Partners = () => {
               <CardHeader>
                 <CardTitle className="text-foreground flex items-center gap-2">
                   <FaMapMarkerAlt className="text-purple-400" />
-                  Buenos Aires
+                  Toronto
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-foreground/80">
-                  Argentina - Partner Location
+                  Canada - Partner Location
                 </CardDescription>
               </CardContent>
             </Card>
@@ -74,8 +74,8 @@ export const Partners = () => {
             <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer">
               <div className="relative h-40 md:h-48">
                 <Image
-                  src="/company/santiago-chile.jpg"
-                  alt="Santiago, Chile - Dafon Partner"
+                  src="/company/dafon-paraguay.jpg"
+                  alt="Asunción, Paraguay - Dafon Partner"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
                   sizes="(max-width: 640px) 100vw, 50vw"
@@ -84,12 +84,12 @@ export const Partners = () => {
               <CardHeader>
                 <CardTitle className="text-foreground flex items-center gap-2">
                   <FaMapMarkerAlt className="text-purple-400" />
-                  Santiago
+                  Asunción
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-foreground/80">
-                  Chile - Partner Location
+                  Paraguay - Partner Location
                 </CardDescription>
               </CardContent>
             </Card>

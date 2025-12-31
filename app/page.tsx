@@ -9,7 +9,6 @@ import { About } from "@/components/About";
 import { Locations } from "@/components/Locations";
 import { Partners } from "@/components/Partners";
 import { Projects } from "@/components/Projects";
-import { Contact } from "@/components/Contact";
 import { CompanyModal } from "@/components/CompanyModal";
 import { backgroundBeams, backgroundGradientColors } from "@/lib/backgroundBeamsConfig";
 
@@ -50,9 +49,6 @@ export default function Home() {
 
       {/* Projects Section */}
       <Projects />
-
-      {/* Contact Section */}
-      <Contact />
 
       {/* Footer */}
       <Footer />

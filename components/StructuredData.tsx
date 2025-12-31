@@ -47,13 +47,13 @@ const getStructuredData = () => {
           },
           {
             "@type": "PostalAddress",
-            addressLocality: "Buenos Aires",
-            addressCountry: "AR",
+            addressLocality: "Toronto",
+            addressCountry: "CA",
           },
           {
             "@type": "PostalAddress",
-            addressLocality: "Santiago",
-            addressCountry: "CL",
+            addressLocality: "Asunción",
+            addressCountry: "PY",
           },
         ],
         sameAs: [

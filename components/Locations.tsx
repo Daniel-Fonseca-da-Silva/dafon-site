@@ -49,7 +49,7 @@ export const Locations = () => {
             <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer">
               <div className="relative h-40 md:h-48">
                 <Image
-                  src="/company/sao-paulo-center.jpg"
+                  src="/company/dafon-sao-paulo.jpg"
                   alt="São Paulo, Brazil"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"
@@ -74,7 +74,7 @@ export const Locations = () => {
             <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer">
               <div className="relative h-40 md:h-48">
                 <Image
-                  src="/company/lisboa-portugal.jpg"
+                  src="/company/dafon-portugal.jpg"
                   alt="Lisboa, Portugal"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-300"

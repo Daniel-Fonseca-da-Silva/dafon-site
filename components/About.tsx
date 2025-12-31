@@ -45,13 +45,13 @@ export const About = () => {
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8"
         >
           <motion.div variants={fadeInUp}>
-            <Card className="glass-strong border-0 overflow-hidden h-full">
+            <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer">
               <div className="relative h-48 md:h-64">
                 <Image
                   src="/company/office-dafon.jpg"
                   alt="Dafon Office"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
@@ -67,13 +67,13 @@ export const About = () => {
           </motion.div>
 
           <motion.div variants={fadeInUp}>
-            <Card className="glass-strong border-0 overflow-hidden h-full">
+            <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer">
               <div className="relative h-48 md:h-64">
                 <Image
-                  src="/company/office-space.jpg"
+                  src="/company/dafon-office-space.jpg"
                   alt="Office Space"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
@@ -89,13 +89,13 @@ export const About = () => {
           </motion.div>
 
           <motion.div variants={fadeInUp} className="sm:col-span-2 lg:col-span-1">
-            <Card className="glass-strong border-0 overflow-hidden h-full">
+            <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer">
               <div className="relative h-48 md:h-64">
                 <Image
                   src="/company/meeting-day.jpg"
                   alt="Team Meeting"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
