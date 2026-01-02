@@ -9,6 +9,7 @@ import { About } from "@/components/About";
 import { Locations } from "@/components/Locations";
 import { Partners } from "@/components/Partners";
 import { Projects } from "@/components/Projects";
+import { Contact } from "@/components/Contact";
 import { CompanyModal } from "@/components/CompanyModal";
 import { backgroundBeams, backgroundGradientColors } from "@/lib/backgroundBeamsConfig";
 
@@ -32,29 +33,32 @@ export default function Home() {
       
       {/* Content with relative z-index */}
       <div className="relative z-10">
-      {/* Navigation - Mobile First */}
-      <Header />
+        {/* Navigation - Mobile First */}
+        <Header />
 
-      {/* Welcome Section */}
-      <Welcome onLearnMoreClick={() => setIsModalOpen(true)} />
+        {/* Welcome Section */}
+        <Welcome onLearnMoreClick={() => setIsModalOpen(true)} />
 
-      {/* About Section */}
-      <About />
+        {/* About Section */}
+        <About />
 
-      {/* Locations Section */}
-      <Locations />
+        {/* Locations Section */}
+        <Locations />
 
-      {/* Partners Section */}
-      <Partners />
+        {/* Partners Section */}
+        <Partners />
 
-      {/* Projects Section */}
-      <Projects />
+        {/* Projects Section */}
+        <Projects />
 
-      {/* Footer */}
-      <Footer />
+        {/* Contact Section */}
+        <Contact /> {/* ✅ Adicione esta linha */}
 
-      {/* Company Modal */}
-      <CompanyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+        {/* Footer */}
+        <Footer />
+
+        {/* Company Modal */}
+        <CompanyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
     </main>
   );
