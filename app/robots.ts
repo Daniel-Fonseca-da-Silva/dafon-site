@@ -8,13 +8,35 @@ export default function robots(): MetadataRoute.Robots {
   }
   
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-      // Disallow admin or private areas if any
-      // disallow: ['/admin/', '/api/'],
-    },
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+          '/api/',
+          '/_next/',
+          '/admin/',
+          '/private/',
+        ],
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: ['/api/'],
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+        disallow: ['/api/'],
+      },
+      {
+        userAgent: 'Slurp',
+        allow: '/',
+        disallow: ['/api/'],
+      },
+    ],
     sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
   };
 }
 

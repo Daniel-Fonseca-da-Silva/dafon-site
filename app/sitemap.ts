@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { getSitemapPaths } from '@/lib/paths';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
@@ -7,16 +8,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     throw new Error('NEXT_PUBLIC_SITE_URL environment variable is required');
   }
   
-  // Since this is a single-page application with anchor links,
-  // we only include the main URL in the sitemap.
-  // Anchor links (#) are not recommended in sitemaps as they point to the same page.
-  return [
-    {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 1,
-    },
-  ];
+  // Get all sitemap-ready paths dynamically
+  const paths = getSitemapPaths();
+  
+  // Convert to Next.js sitemap format
+  return paths.map((path) => ({
+    url: path.url,
+    lastModified: path.lastModified || new Date(),
+    changeFrequency: path.changeFrequency,
+    priority: path.priority,
+  }));
 }
-
