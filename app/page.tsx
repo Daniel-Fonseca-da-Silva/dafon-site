@@ -5,11 +5,6 @@ import { PulseBeams } from "@/components/ui/pulse-beams";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Welcome } from "@/components/Welcome";
-import { About } from "@/components/About";
-import { Locations } from "@/components/Locations";
-import { Partners } from "@/components/Partners";
-import { Projects } from "@/components/Projects";
-import { Contact } from "@/components/Contact";
 import { CompanyModal } from "@/components/CompanyModal";
 import { backgroundBeams, backgroundGradientColors } from "@/lib/backgroundBeamsConfig";
 
@@ -38,21 +33,6 @@ export default function Home() {
 
         {/* Welcome Section */}
         <Welcome onLearnMoreClick={() => setIsModalOpen(true)} />
-
-        {/* About Section */}
-        <About />
-
-        {/* Locations Section */}
-        <Locations />
-
-        {/* Partners Section */}
-        <Partners />
-
-        {/* Projects Section */}
-        <Projects />
-
-        {/* Contact Section */}
-        <Contact /> {/* ✅ Adicione esta linha */}
 
         {/* Footer */}
         <Footer />
