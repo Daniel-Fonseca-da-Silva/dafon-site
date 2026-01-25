@@ -1,12 +1,7 @@
 import { NextResponse } from 'next/server';
 
-/**
- * GET /humans.txt
- * Returns human-readable information about the website
- * Following the humans.txt standard: https://humanstxt.org/
- */
 export async function GET() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dafon.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dafon.online';
   const currentYear = new Date().getFullYear();
 
   const humansTxt = `/* TEAM */
@@ -35,7 +30,7 @@ Backend: Next.js API Routes, Node.js
 Languages: TypeScript, JavaScript, Golang, Python, Java
 Email Service: Resend
 Security: Cloudflare Turnstile
-Hosting: Vercel (recommended)
+Hosting: Vercel
 
 /* SERVICES */
 - Business Solutions
@@ -82,4 +77,3 @@ Last update: ${new Date().toISOString()}
     },
   });
 }
-

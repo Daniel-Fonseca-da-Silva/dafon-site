@@ -1,17 +1,12 @@
 import { NextResponse } from 'next/server';
 
-/**
- * GET /security.txt
- * Redirects to /.well-known/security.txt
- * Following RFC 9116 recommendation for backward compatibility
- */
 export async function GET() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dafon.com';
-  const securityEmail = process.env.SECURITY_EMAIL || 'security@dafon.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dafon.online';
+  const securityEmail = process.env.SECURITY_EMAIL || 'dafondeveloper@gmail.com';
   const securityPolicy = process.env.SECURITY_POLICY_URL || `${siteUrl}/security-policy`;
 
   const securityTxt = `Contact: mailto:${securityEmail}
-Expires: ${new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0]}T23:59:59.000Z
+Expires: ${new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString()}
 Preferred-Languages: en, pt, es
 Canonical: ${siteUrl}/.well-known/security.txt
 Policy: ${securityPolicy}
@@ -45,4 +40,3 @@ Hiring: ${siteUrl}/careers
     },
   });
 }
-

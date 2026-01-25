@@ -1,11 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL;
-  
-  if (!baseUrl) {
-    throw new Error('NEXT_PUBLIC_SITE_URL environment variable is required');
-  }
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dafon.online';
   
   return {
     rules: [
@@ -29,14 +25,8 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/api/'],
       },
-      {
-        userAgent: 'Slurp',
-        allow: '/',
-        disallow: ['/api/'],
-      },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl,
   };
 }
-
