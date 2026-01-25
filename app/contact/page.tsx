@@ -47,7 +47,6 @@ export default function ContactPage() {
 
   const turnstileRef = useRef<HTMLDivElement>(null);
   const widgetIdRef = useRef<string>("");
-  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
 
   const {
     register,
@@ -60,6 +59,7 @@ export default function ContactPage() {
 
   useEffect(() => {
     const initTurnstile = () => {
+      const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
       if (window.turnstile && turnstileRef.current && !widgetIdRef.current) {
         
         if (!siteKey) {
