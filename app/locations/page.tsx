@@ -1,13 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PulseBeams } from "@/components/ui/pulse-beams";
 import { backgroundBeams, backgroundGradientColors } from "@/lib/backgroundBeamsConfig";
+import { FaMapMarkerAlt, FaCheckCircle } from "react-icons/fa";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -75,55 +74,93 @@ export default function LocationsPage() {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="grid sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto"
+              className="grid sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-4xl mx-auto"
             >
               <motion.div variants={fadeInUp}>
-                <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer">
-                  <div className="relative h-40 md:h-48">
-                    <Image
-                      src="/company/dafon-sao-paulo.jpg"
-                      alt="São Paulo, Brazil"
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-300"
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                    />
+                <Card className="glass-strong border-0 h-full group cursor-pointer hover:bg-white/5 transition-all relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 rounded-lg animate-[spin_2s_linear_infinite]" 
+                         style={{
+                           background: 'conic-gradient(from 0deg, rgba(168, 85, 247, 1) 0%, rgba(139, 92, 246, 1) 5%, transparent 15%, transparent 85%, rgba(139, 92, 246, 1) 95%, rgba(168, 85, 247, 1) 100%)',
+                           filter: 'blur(4px)'
+                         }}>
+                    </div>
+                    <div className="absolute inset-[1px] bg-[#0a0a0a] rounded-lg"></div>
                   </div>
-                  <CardHeader>
-                    <CardTitle className="text-foreground flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-purple-400" />
-                      São Paulo
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-foreground/80">
-                      Brazil
-                    </CardDescription>
-                  </CardContent>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 rounded-lg shadow-[0_0_30px_rgba(168,85,247,0.6)]"></div>
+                  </div>
+                  <div className="relative z-10">
+                    <CardHeader className="text-center pb-4 pt-6">
+                      <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.8)] transition-all">
+                        <FaMapMarkerAlt className="text-3xl text-purple-400" />
+                      </div>
+                      <CardTitle className="text-foreground text-xl mb-2">Cheyenne, Wyoming</CardTitle>
+                      <p className="text-sm text-foreground/70 px-2">
+                        Our strategic location in the United States provides access to North American markets and cutting-edge technology ecosystems.
+                      </p>
+                    </CardHeader>
+                    <CardContent className="pb-6">
+                      <ul className="space-y-2 text-sm text-foreground/80">
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>North American headquarters</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>24/7 support coverage</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>Innovation hub & tech center</span>
+                        </li>
+                      </ul>
+                    </CardContent>
+                  </div>
                 </Card>
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer">
-                  <div className="relative h-40 md:h-48">
-                    <Image
-                      src="/company/dafon-portugal.jpg"
-                      alt="Lisboa, Portugal"
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-300"
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                    />
+                <Card className="glass-strong border-0 h-full group cursor-pointer hover:bg-white/5 transition-all relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 rounded-lg animate-[spin_2s_linear_infinite]" 
+                         style={{
+                           background: 'conic-gradient(from 0deg, rgba(168, 85, 247, 1) 0%, rgba(139, 92, 246, 1) 5%, transparent 15%, transparent 85%, rgba(139, 92, 246, 1) 95%, rgba(168, 85, 247, 1) 100%)',
+                           filter: 'blur(4px)'
+                         }}>
+                    </div>
+                    <div className="absolute inset-[1px] bg-[#0a0a0a] rounded-lg"></div>
                   </div>
-                  <CardHeader>
-                    <CardTitle className="text-foreground flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-purple-400" />
-                      Lisboa
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-foreground/80">
-                      Portugal
-                    </CardDescription>
-                  </CardContent>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 rounded-lg shadow-[0_0_30px_rgba(168,85,247,0.6)]"></div>
+                  </div>
+                  <div className="relative z-10">
+                    <CardHeader className="text-center pb-4 pt-6">
+                      <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.8)] transition-all">
+                        <FaMapMarkerAlt className="text-3xl text-purple-400" />
+                      </div>
+                      <CardTitle className="text-foreground text-xl mb-2">Lisboa, Portugal</CardTitle>
+                      <p className="text-sm text-foreground/70 px-2">
+                        Our European presence in Lisboa connects us to the vibrant tech scene and provides seamless service to European clients.
+                      </p>
+                    </CardHeader>
+                    <CardContent className="pb-6">
+                      <ul className="space-y-2 text-sm text-foreground/80">
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>European headquarters</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>Multilingual support team</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>Strategic EU market access</span>
+                        </li>
+                      </ul>
+                    </CardContent>
+                  </div>
                 </Card>
               </motion.div>
             </motion.div>

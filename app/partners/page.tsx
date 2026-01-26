@@ -1,13 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PulseBeams } from "@/components/ui/pulse-beams";
 import { backgroundBeams, backgroundGradientColors } from "@/lib/backgroundBeamsConfig";
+import { FaHandshake, FaCheckCircle } from "react-icons/fa";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -76,55 +75,93 @@ export default function PartnersPage() {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="grid sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto"
+              className="grid sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-4xl mx-auto"
             >
               <motion.div variants={fadeInUp}>
-                <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer">
-                  <div className="relative h-40 md:h-48">
-                    <Image
-                      src="/company/dafon-toronto.jpg"
-                      alt="Toronto, Canada - Dafon Partner"
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-300"
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                    />
+                <Card className="glass-strong border-0 h-full group cursor-pointer hover:bg-white/5 transition-all relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 rounded-lg animate-[spin_2s_linear_infinite]" 
+                         style={{
+                           background: 'conic-gradient(from 0deg, rgba(168, 85, 247, 1) 0%, rgba(139, 92, 246, 1) 5%, transparent 15%, transparent 85%, rgba(139, 92, 246, 1) 95%, rgba(168, 85, 247, 1) 100%)',
+                           filter: 'blur(4px)'
+                         }}>
+                    </div>
+                    <div className="absolute inset-[1px] bg-[#0a0a0a] rounded-lg"></div>
                   </div>
-                  <CardHeader>
-                    <CardTitle className="text-foreground flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-purple-400" />
-                      Toronto
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-foreground/80">
-                      Canada - Partner Location
-                    </CardDescription>
-                  </CardContent>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 rounded-lg shadow-[0_0_30px_rgba(168,85,247,0.6)]"></div>
+                  </div>
+                  <div className="relative z-10">
+                    <CardHeader className="text-center pb-4 pt-6">
+                      <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.8)] transition-all">
+                        <FaHandshake className="text-3xl text-purple-400" />
+                      </div>
+                      <CardTitle className="text-foreground text-xl mb-2">Brazil Partnership</CardTitle>
+                      <p className="text-sm text-foreground/70 px-2">
+                        Our strategic partnership in Brazil enables us to deliver exceptional services across Latin America with local expertise and global standards.
+                      </p>
+                    </CardHeader>
+                    <CardContent className="pb-6">
+                      <ul className="space-y-2 text-sm text-foreground/80">
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>Latin American market access</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>Local expertise & support</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>Regional innovation hub</span>
+                        </li>
+                      </ul>
+                    </CardContent>
+                  </div>
                 </Card>
               </motion.div>
 
               <motion.div variants={fadeInUp}>
-                <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer">
-                  <div className="relative h-40 md:h-48">
-                    <Image
-                      src="/company/dafon-paraguay.jpg"
-                      alt="Asunción, Paraguay - Dafon Partner"
-                      fill
-                      className="object-cover group-hover:scale-110 transition-transform duration-300"
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                    />
+                <Card className="glass-strong border-0 h-full group cursor-pointer hover:bg-white/5 transition-all relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 rounded-lg animate-[spin_2s_linear_infinite]" 
+                         style={{
+                           background: 'conic-gradient(from 0deg, rgba(168, 85, 247, 1) 0%, rgba(139, 92, 246, 1) 5%, transparent 15%, transparent 85%, rgba(139, 92, 246, 1) 95%, rgba(168, 85, 247, 1) 100%)',
+                           filter: 'blur(4px)'
+                         }}>
+                    </div>
+                    <div className="absolute inset-[1px] bg-[#0a0a0a] rounded-lg"></div>
                   </div>
-                  <CardHeader>
-                    <CardTitle className="text-foreground flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-purple-400" />
-                      Asunción
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-foreground/80">
-                      Paraguay - Partner Location
-                    </CardDescription>
-                  </CardContent>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute inset-0 rounded-lg shadow-[0_0_30px_rgba(168,85,247,0.6)]"></div>
+                  </div>
+                  <div className="relative z-10">
+                    <CardHeader className="text-center pb-4 pt-6">
+                      <div className="mx-auto mb-4 w-16 h-16 rounded-full bg-purple-500/20 flex items-center justify-center group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.8)] transition-all">
+                        <FaHandshake className="text-3xl text-purple-400" />
+                      </div>
+                      <CardTitle className="text-foreground text-xl mb-2">Canada Partnership</CardTitle>
+                      <p className="text-sm text-foreground/70 px-2">
+                        Our Canadian partnership provides access to North American markets and connects us with leading technology companies and innovation centers.
+                      </p>
+                    </CardHeader>
+                    <CardContent className="pb-6">
+                      <ul className="space-y-2 text-sm text-foreground/80">
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>North American expansion</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>Tech ecosystem integration</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <FaCheckCircle className="text-purple-400 mt-1 flex-shrink-0" />
+                          <span>Collaborative innovation</span>
+                        </li>
+                      </ul>
+                    </CardContent>
+                  </div>
                 </Card>
               </motion.div>
             </motion.div>
