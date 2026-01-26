@@ -1,10 +1,9 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dafon.online';
-  const securityEmail = process.env.SECURITY_EMAIL || 'dafondeveloper@gmail.com';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+  const securityEmail = process.env.SECURITY_EMAIL;
   const securityPolicy = process.env.SECURITY_POLICY_URL || `${siteUrl}/security-policy`;
-
   const securityTxt = `Contact: mailto:${securityEmail}
 Expires: ${new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString()}
 Preferred-Languages: en, pt, es
