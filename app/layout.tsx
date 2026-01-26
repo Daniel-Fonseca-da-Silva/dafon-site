@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { StructuredData } from "@/components/StructuredData";
 import { defaultMetadata } from "@/lib/metadata";
+import { GoogleTagManager } from '@next/third-parties/google';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,9 +34,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB">
+      {/* O componente GoogleTagManager injeta o script automaticamente */}
+      <GoogleTagManager gtmId="GTM-NCZ294KZ" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        {/* Fallback para usuários sem JavaScript (recomendado pelo Google) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NCZ294KZ"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+
         <Script
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"
           strategy="lazyOnload"
