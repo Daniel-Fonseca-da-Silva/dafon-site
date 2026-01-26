@@ -31,7 +31,6 @@ export const Welcome = ({ onLearnMoreClick }: WelcomeProps) => {
           animate="animate"
           className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-12 items-center"
         >
-          {/* CEO Image - Mobile First */}
           <motion.div
             variants={fadeInUp}
             className="w-full order-1 md:order-2"
@@ -62,11 +61,23 @@ export const Welcome = ({ onLearnMoreClick }: WelcomeProps) => {
             </div>
           </motion.div>
           
-          {/* Hero Content */}
           <motion.div variants={fadeInUp} className="w-full order-2 md:order-1 text-center md:text-left">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
               Welcome to{" "}
-              <span className="text-gradient-purple">Dafon</span>
+              <motion.span 
+                className="text-gradient-purple inline-block"
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                  rotate: [0, 2, -2, 0]
+                }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatDelay: 1
+                }}
+              >
+                Dafon
+              </motion.span>
             </h1>
             <p className="text-base md:text-lg lg:text-xl text-foreground/80 mb-6 md:mb-8 leading-relaxed">
               We deliver innovative solutions and exceptional service to transform your business. 
@@ -96,4 +107,3 @@ export const Welcome = ({ onLearnMoreClick }: WelcomeProps) => {
     </section>
   );
 };
-

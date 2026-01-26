@@ -37,7 +37,7 @@ export default function LocationsPage() {
           className="w-full h-full opacity-40"
         />
       </div>
-      
+
       <div className="relative z-10">
         <Header />
         <section id="locations" className="pt-32 md:pt-40 pb-12 md:pb-20 px-4">
@@ -49,9 +49,22 @@ export default function LocationsPage() {
               transition={{ duration: 0.6 }}
               className="text-center mb-8 md:mb-12"
             >
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4">
-                Our <span className="text-gradient-purple">Locations</span>
-              </h2>
+              <motion.h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-foreground mb-3 md:mb-4">
+                Our <motion.span
+                  className="text-gradient-purple inline-block"
+                  animate={{
+                    scale: [1, 1.05, 1],
+                    rotate: [0, 2, -2, 0]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatDelay: 1
+                  }}
+                >
+                  Locations
+                </motion.span>
+              </motion.h2>
               <p className="text-base md:text-lg text-foreground/70 max-w-2xl mx-auto">
                 Serving clients across multiple continents with a global presence.
               </p>

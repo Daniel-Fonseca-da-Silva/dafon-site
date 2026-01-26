@@ -61,7 +61,7 @@ export default function ContactPage() {
     const initTurnstile = () => {
       const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
       if (window.turnstile && turnstileRef.current && !widgetIdRef.current) {
-        
+
         if (!siteKey) {
           console.log('sitekey!', siteKey)
           console.error("TURNSTILE_SITE_KEY is not configured");
@@ -126,7 +126,7 @@ export default function ContactPage() {
         message: "Message sent successfully! We'll get back to you soon.",
       });
       reset();
-      
+
       if (window.turnstile && widgetIdRef.current) {
         window.turnstile.reset(widgetIdRef.current);
         setTurnstileToken("");
@@ -136,7 +136,7 @@ export default function ContactPage() {
         type: "error",
         message: error instanceof Error ? error.message : "Failed to send message. Please try again.",
       });
-      
+
       if (window.turnstile && widgetIdRef.current) {
         window.turnstile.reset(widgetIdRef.current);
         setTurnstileToken("");
@@ -159,10 +159,10 @@ export default function ContactPage() {
           className="w-full h-full opacity-40"
         />
       </div>
-      
+
       <div className="relative z-10">
         <Header />
-        
+
         <section id="contact" className="pt-24 md:pt-32 pb-12 md:pb-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -172,9 +172,22 @@ export default function ContactPage() {
               viewport={{ once: true }}
               className="text-center mb-8 md:mb-12"
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
-                Get In Touch
-              </h2>
+              <motion.h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
+                Get In <motion.span
+                  className="text-gradient-purple inline-block"
+                  animate={{
+                    scale: [1, 1.05, 1],
+                    rotate: [0, 2, -2, 0]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    repeatDelay: 1
+                  }}
+                >
+                  Touch
+                </motion.span>
+              </motion.h2>
               <p className="text-base md:text-lg text-foreground/70 max-w-2xl mx-auto">
                 Have a project in mind? Let's discuss how we can help transform your business.
               </p>
@@ -282,11 +295,10 @@ export default function ContactPage() {
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className={`p-4 rounded-lg text-center ${
-                      submitStatus.type === "success"
-                        ? "bg-green-500/20 text-green-300 border border-green-500/30"
-                        : "bg-red-500/20 text-red-300 border border-red-500/30"
-                    }`}
+                    className={`p-4 rounded-lg text-center ${submitStatus.type === "success"
+                      ? "bg-green-500/20 text-green-300 border border-green-500/30"
+                      : "bg-red-500/20 text-red-300 border border-red-500/30"
+                      }`}
                   >
                     {submitStatus.message}
                   </motion.div>
