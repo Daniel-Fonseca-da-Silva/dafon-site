@@ -1,0 +1,79 @@
+---
+title: "How We Built TechCuisine: Putting Numbers Behind Every Dish"
+description: "How we built an AI-powered kitchen cost platform for restaurants and why food cost is the problem most kitchens ignore until it is too late."
+slug: "how-we-built-techcuisine"
+publishedAt: "2026-05-31"
+updatedAt: "2026-05-31"
+author: "Daniel Fonseca da Silva"
+coverImage: "/projects/techcuisine-banner.png"
+projectUrl: "https://www.techcuisine.online"
+tags: ["TechCuisine", "Restaurant Tech", "Food Cost", "SaaS", "AI"]
+---
+
+Most restaurants that close do not close because the food is bad. They close because the numbers were wrong from the beginning, and nobody caught it until it was too late.
+
+A chef spends weeks developing a new dish. The flavour is right. The presentation is right. Customers like it. Six months later, the restaurant is in trouble because that dish, priced without accounting for yield loss, portion drift, and volatile supplier costs, was quietly losing money on every plate.
+
+That is the problem TechCuisine was built to solve.
+
+## The Problem in the Kitchen
+
+Chefs are trained to cook. Most are not trained to run cost models. When a new dish goes on the menu, the typical process involves a rough cost estimate based on ingredient prices from the last order, no adjustment for waste or yield, and a selling price that feels right. That works until it does not.
+
+Ingredient prices change. A supplier raises the price of chicken. The cost of olive oil spikes. The kitchen adjusts the recipe slightly without updating the cost sheet. After a few months, the actual food cost percentage is meaningless because the data is stale.
+
+For restaurants running 200 or more recipes, doing this manually is not realistic. The sheets get outdated, the numbers become approximate, and the kitchen ends up operating on intuition.
+
+Catering businesses have it even harder. Scaling a recipe from 8 portions to 80 involves calculations that are easy to get wrong, especially when yield factors differ at volume and ingredient prices vary by order size.
+
+We kept hearing the same things from professional kitchens: "We know food cost is a problem, but we do not have time to track it properly." That is a tooling problem, not a discipline problem. A kitchen team doing things the way their tools allow is not doing anything wrong; the tools just have not caught up.
+
+## Why We Built TechCuisine
+
+We have always been drawn to industries where software adoption is lagging behind what is actually possible. Restaurants are one of those industries.
+
+There is excellent software for point-of-sale, for reservations, for delivery management. The back-of-house operations side, specifically food cost and recipe management, still relies on spreadsheets and manual updates in most kitchens we spoke to.
+
+The gap between what a kitchen could know about its costs and what it actually knows is significant. We thought we could close that gap with a focused, well-designed product.
+
+The name TechCuisine was intentional. Technology for the kitchen. Not a generic operations tool, but something built for the specific reality of food service.
+
+## How We Built It
+
+The core of the platform is the recipe sheet. Each recipe in TechCuisine is built with ingredients, quantities, and real-time costs from the supplier price list. Every time a supplier price changes, the system recalculates the cost of every recipe that uses that ingredient automatically.
+
+Yield correction was a feature we spent a lot of time on. A 1 kg bag of potatoes does not produce 1 kg of usable potato. Peeling, trimming, and cooking all reduce the yield. TechCuisine tracks yield percentages per ingredient, so the cost calculations reflect what actually comes out on the plate, not what went in the bag.
+
+The AI layer does two things. It analyses your cost structure and flags anomalies: recipes where the margin is below target, or where ingredient substitutions could improve profitability without changing the dish materially. It also generates a suggested selling price based on your target food cost percentage and local market context.
+
+The menu engineering view uses a classic matrix. Stars are dishes with high popularity and high margin. Plowhorses are popular but running on thin margin. Puzzles have strong margin but low sales. Dogs are low on both. Every item on your menu gets classified, so you can see at a glance where to focus your attention.
+
+For catering, the batch scaling tool takes any recipe and scales it to any number of portions, adjusting quantities and costs automatically. If you are cooking for a 300-person wedding, you put in 300 and get the full cost breakdown for that batch.
+
+PDF export is built in for every recipe sheet and cost report, because kitchens still print things, and that is fine.
+
+## What It Delivers
+
+The numbers we have seen from kitchens using the platform: over 500 recipes managed, average food cost reduction of 28% in the first three months as teams find and fix underpriced dishes and high-waste ingredients.
+
+A 28% reduction in food cost is the difference between a kitchen that is barely profitable and one that has room to invest in staff, ingredients, or expansion. That is real money.
+
+The menu engineering view has been particularly useful for restaurants preparing seasonal menu changes. Instead of guessing which dishes to keep, drop, or reprice, they have actual performance data to work with.
+
+## Who Is Using It
+
+TechCuisine is live at [techcuisine.online](https://www.techcuisine.online) and being used by restaurants, catering businesses, and professional kitchen consultants.
+
+The range is wider than we expected. We thought the primary users would be mid-size restaurants. In practice, we also have individual chefs using it for pop-up operations, catering teams running large events, and kitchen managers at hotel groups who needed something more structured than spreadsheets but simpler than a full enterprise ERP.
+
+## What Comes Next
+
+A demo video is in production. The platform is straightforward once you see it in action, but the first-time setup can feel like a lot of steps, and a walkthrough helps.
+
+We are also working on supplier price tracking with automatic notifications. Right now you update prices manually or import them. The next version will connect to supplier data and flag when a key ingredient price has moved enough to affect your menu margins materially.
+
+Integrations are on the roadmap. Point-of-sale data is the obvious next step. If we can connect TechCuisine to what is actually selling and at what volume, the menu engineering analysis becomes significantly more accurate.
+
+If you run a kitchen and food cost is something you know you should be tracking better, TechCuisine is built for that exact situation.
+
+<ProjectCTA url="https://www.techcuisine.online" label="Try TechCuisine" />

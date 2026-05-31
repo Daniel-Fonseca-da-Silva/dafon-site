@@ -1,0 +1,73 @@
+---
+title: "Dafon's Approach to Software Development: What We Do Differently"
+description: "The engineering principles Dafon applies to DafonCV, TechCuisine, and client projects across Brazil, Portugal, Canada, and Estonia."
+slug: "dafon-software-development-approach"
+publishedAt: "2026-05-31"
+updatedAt: "2026-05-31"
+author: "Daniel Fonseca da Silva"
+coverImage: "/projects/dafoncv-banner.png"
+projectUrl: "https://www.dafoncv.com"
+tags: ["software development", "Dafon", "Golang", "Next.js", "Python", "SaaS"]
+---
+
+Software development teams tend to fail at the same things: requirements that were never quite right turning into expensive changes mid-build, technical debt accumulating until the system is too fragile to extend, and handoffs that leave clients unable to maintain what was built for them. We have spent years building systems that avoid those patterns. Here is what that looks like in practice.
+
+## We Ship Products, Not Just Client Work
+
+The fastest way to understand what a software development team is actually capable of is to look at what they build for themselves.
+
+Dafon ships and maintains its own SaaS products. DafonCV is an AI resume platform used across European and Latin American markets. TechCuisine is a food cost and recipe management platform for professional kitchens. Both are production systems with real users, real support requirements, and real consequences when something breaks.
+
+When we build for clients, we apply the same engineering standards we apply to our own products. The infrastructure, the testing approach, the deployment pipeline, the monitoring: none of that comes from a consulting playbook. It is the standard of a team that has to live with its own systems.
+
+## The Stack and Why
+
+Our primary stack is Golang, Next.js, and Python, with PostgreSQL as the default data layer.
+
+Golang is the backend of choice because the performance characteristics match the problems we usually solve: API services that need to handle concurrent load efficiently, background processing pipelines, systems that need to be reliable at scale without expensive infrastructure. The concurrency model fits the kind of work we do, and the compiled output is straightforward to deploy.
+
+Next.js handles the frontend. Server-side rendering matters for load time and SEO on most applications, and the developer experience is good enough that the team stays productive without friction. For static sites, the output is fast by default.
+
+Python is the AI and data layer where needed. The ecosystem for model integration is unmatched. We do not write application logic in Python. The type system and runtime characteristics are wrong for that; we use it for data processing, model orchestration, and numerical computation.
+
+The stack is not religious. We have shipped systems in other languages and frameworks where the requirements called for it. The Golang, Next.js, and Python combination is what we default to because it solves the problems we most frequently encounter and produces systems that a client team can maintain after handoff.
+
+## Requirements Before Architecture
+
+The most expensive mistake in software development is writing architecture documents before the requirements are actually understood.
+
+Before any architecture decision is made, we document what the system needs to do in terms of user outcomes and measurable behaviour. Not features, not UI flows. What does success look like for the person using this, and how will we know when we have achieved it?
+
+This takes longer at the start and saves significant time during development. Scope changes that arrive late because the requirements were never properly defined are the primary cause of projects running over budget and over schedule. We have seen this enough times that we decline to start without clear requirements, even when the pressure is to move fast.
+
+## Production-Ready from the First Commit
+
+A recurring pattern in software development engagements: the team builds rapidly, ships a demo that looks good, and then the production hardening phase begins. The production hardening phase is where the timeline doubles and the budget overruns.
+
+We do not have a production hardening phase because we build to production standards from the first commit. Error handling is not an afterthought. The database schema is versioned from the start. Environment configuration is externalised before we have more than one environment. Logging is structured and queryable. The deployment pipeline is automated before the first feature is done.
+
+This is slower at the beginning. It is faster overall because you are not rebuilding the foundation while trying to extend the walls.
+
+## Data Architecture Is the Long-Term Decision
+
+Ten years from now, the framework you chose will probably be irrelevant. The data model you chose will still be determining what the system can and cannot do.
+
+We spend disproportionate time on data architecture at the start of a project because it is the decision that is hardest to reverse and has the most downstream consequences. Premature normalisation, missing indices, schema decisions that look fine at low volume and fall apart at scale: those are what cause rewrites.
+
+The data model review happens before development starts, with at least one engineer who has seen production systems break at scale. If the model does not survive that review, it gets redesigned before anyone writes an ORM.
+
+## What Happens After Launch
+
+Software development does not end at launch. It ends when the client can maintain and extend the system without us.
+
+Our standard handoff includes complete documentation of the deployment process, a runbook for the most common operational issues, a documented data model, and a session where we walk through the codebase with whoever will maintain it. If the client has no internal engineering team, we structure the handoff to a third party instead.
+
+We also offer retained engineering for ongoing development. Many of our clients build the initial system with us and retain us for feature development and maintenance. The arrangement works because the initial system is built to be maintainable. There is no accumulation of shortcuts, no technical debt that makes ongoing work painful.
+
+## Dafon Software Development
+
+Our team is distributed across Brazil, Portugal, Canada, and Estonia, with engineering depth concentrated in system architecture and AI application development. We have built SaaS platforms, enterprise integrations, AI-powered tools, and custom websites across multiple industries and markets.
+
+If you are building something that needs to work reliably at scale, we would like to talk.
+
+<ProjectCTA url="https://www.dafoncv.com" label="See DafonCV" />

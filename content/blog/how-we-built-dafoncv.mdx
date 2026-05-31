@@ -1,0 +1,69 @@
+---
+title: "How We Built DafonCV: Solving the ATS Problem for Job Seekers"
+description: "Why we built an AI resume platform in Portugal, the pain we saw, and what comes next for DafonCV."
+slug: "how-we-built-dafoncv"
+publishedAt: "2026-05-31"
+updatedAt: "2026-05-31"
+author: "Daniel Fonseca da Silva"
+coverImage: "/projects/dafoncv-banner.png"
+projectUrl: "https://www.dafoncv.com"
+tags: ["DafonCV", "ATS", "SaaS", "Golang", "Next.js"]
+---
+
+Every week, thousands of qualified candidates get rejected before a human ever reads their CV. Usually not because they lack the skills or because they are a bad fit. They get rejected because a piece of software filtered them out, quietly, before the hiring manager opened the inbox.
+
+That is the problem we set out to fix with DafonCV.
+
+## The Pain We Saw
+
+We started noticing this while working closely with consulting firms in Portugal and Brazil. Recruitment teams were spending hours sifting through CVs, and still missing strong candidates. On the other side, job seekers with real experience were applying to ten, twenty, fifty positions and hearing nothing back.
+
+When we looked closer, the pattern was consistent. Most applicants were submitting CVs that were either poorly formatted for Applicant Tracking Systems (ATS), missing the right keywords, or structured in a way that made automated parsing fail. The candidate was qualified. The CV just could not communicate that to a machine.
+
+Consulting firms had the opposite frustration. They were receiving stacks of CVs from candidates who looked similar on paper, with no easy way to match them to specific client requirements. The standardisation problem was costing them time and placement accuracy.
+
+Both sides had the same root cause: the gap between what a person can do and what their CV actually says.
+
+## Why We Decided to Build It
+
+We are a software team. When we see a systemic problem with a technical solution, we build the solution.
+
+We had seen this enough times, working across Portugal and Brazil, to know it was not an edge case. The humanitarian angle was real too. Unemployment and career transitions are painful. People spend months submitting applications into what feels like a black hole. If we could raise the odds for even a fraction of them, that was worth doing.
+
+We also had the access. Building in Portugal, with connections across European and Latin American markets, we understood the regional nuances that a generic product would miss. European CVs have different norms than North American ones. Consulting firms in Portugal and Brazil have specific requirements. We could build something that actually fit those contexts.
+
+## How We Built It
+
+We chose Golang for the backend from the start. The performance characteristics matter when you are running AI analysis at scale, and Go's concurrency model fits the kind of parallel processing we needed for CV parsing and job matching.
+
+The frontend is Next.js. It handles server-side rendering well, which matters for load time on a platform where users often access it on mobile, mid-job-search, under stress. We did not want them waiting for a slow page.
+
+The AI layer does several things: it parses the CV, identifies gaps against a target job description, generates a match score, and suggests specific improvements. The suggestions are not generic; they are tied to the actual job the candidate is applying for.
+
+For consulting firms, we added a standardisation layer. When a firm receives CVs from multiple candidates, DafonCV normalises them into a consistent format, making comparison faster and more reliable.
+
+We built with European standards throughout. GDPR compliance was not an afterthought; it was part of the data model from day one. We take candidate data seriously.
+
+## What It Does for Users
+
+The core experience for a job seeker: you upload your CV, paste in a job description, and get a detailed breakdown. The match score tells you where you stand. The keyword analysis shows what is missing. The formatting feedback tells you whether the ATS will parse your document correctly. Then you can edit and export a clean, professional CV.
+
+For consulting firms, the platform handles bulk intake. Upload ten CVs, set your requirements, get ranked candidates with standardised profiles.
+
+The numbers we have seen so far are solid. Over 10,000 CVs processed. Average match score improvement of around 35% from first draft to final version. Consulting firms using the platform report faster shortlisting times.
+
+## Where We Are Now
+
+DafonCV is live at [dafoncv.com](https://www.dafoncv.com) and being used across Portugal, Brazil, and European markets. We have job seekers using it for applications to roles in tech, finance, healthcare, and management consulting. The consulting firm side is growing as word spreads through the sector.
+
+We are still a focused product. We built what the problem required, not the maximum possible feature set.
+
+## What Comes Next
+
+A few things are in progress. A demo video is on the way, because the platform is more intuitive in action than in description. We are also expanding language support beyond English and Portuguese. French and Spanish are the next targets, given where our users are concentrated.
+
+On the AI side, we are refining the hiring probability model. Right now it gives you a match score. The next version will give you a probability estimate based on historical placement data, so you can prioritise which applications are worth most of your time.
+
+If you are job hunting, transitioning careers, or running a consulting firm that needs better CV intake, try it at [dafoncv.com](https://www.dafoncv.com). We built it for exactly those situations.
+
+<ProjectCTA url="https://www.dafoncv.com" label="Try DafonCV" />

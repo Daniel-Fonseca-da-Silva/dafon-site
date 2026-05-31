@@ -1,0 +1,67 @@
+---
+title: "How Dafon Builds AI Applications: From Problem to Production"
+description: "A look at how the Dafon team approaches AI development, from identifying the right problem to shipping a production-ready application."
+slug: "how-dafon-builds-ai-applications"
+publishedAt: "2026-05-31"
+updatedAt: "2026-05-31"
+author: "Daniel Fonseca da Silva"
+coverImage: "/projects/dafoncv-banner.png"
+projectUrl: "https://www.dafoncv.com"
+tags: ["AI development", "AI applications", "software development", "Dafon", "Golang", "Next.js"]
+---
+
+There is a version of AI development that looks like magic from the outside. You describe a problem, the AI layer absorbs it, and the right answer comes out. The actual process is more grounded than that, and understanding how it works is the difference between an AI feature that ships and one that gets cancelled six months in.
+
+This is how we approach it at Dafon.
+
+## Start with the Problem, Not the Model
+
+Every AI application we build starts with a concrete failure mode. Not "we want to add AI," but "there is a specific thing going wrong that a model can help fix."
+
+With DafonCV, the failure was clear: qualified job seekers were getting filtered out by Applicant Tracking Systems before a human ever saw their CV. The model's job was to close the gap between what a candidate can actually do and what their CV communicates to an ATS. That specificity matters. It shapes what you measure, what you ship, and what you cut.
+
+When a problem is vague, the application built around it tends to be vague too. Vague applications are expensive to build, hard to evaluate, and usually not that useful. We tend to decline projects that start with "let's see what AI can do for us" and engage with ones that start with "here is the specific thing that keeps failing."
+
+## Choose the Right Integration Layer
+
+AI development is not about picking the best model. It is about picking the right integration pattern for your specific use case.
+
+Some problems need real-time inference; others work better as batch processes. Some need a model embedded deep in a workflow; others just need a standalone API call. Getting this wrong costs you, both in latency and in operational expense.
+
+Our typical stack for AI applications is a Golang backend for orchestration and concurrency, a Next.js frontend for the user-facing interface, and a Python service for the model layer where needed. The split is deliberate: Golang handles the load, Python accesses the ecosystem, Next.js keeps the front-end fast.
+
+The model itself is usually the smallest decision in the stack. The data pipeline, the retry logic, the evaluation framework, the cost controls: those are where the real engineering goes.
+
+## Build the Evaluation Before the Feature
+
+One mistake that adds months to AI application development: building the feature first, then figuring out how to know if it works.
+
+Before we ship any AI-powered feature in production, we have a benchmark dataset and a set of metrics we are willing to be held to. For DafonCV, that meant a corpus of CVs paired with job descriptions, with human-rated match scores as ground truth. Every change to the model layer had to move the benchmark in the right direction before it went to production.
+
+This sounds slow. It is actually fast, because you stop shipping regressions.
+
+## Design for the Failure Cases
+
+AI applications fail differently than deterministic software. A traditional bug produces a wrong output consistently. An AI failure produces a wrong output sometimes, in ways that are hard to predict.
+
+The design question is: what happens when the model is wrong?
+
+For DafonCV, we built explicit confidence thresholds. If the match score analysis falls below a confidence threshold, we surface that to the user rather than presenting a low-confidence result as fact. The user can still use the analysis, but they know what they are working with.
+
+For TechCuisine's AI layer, which flags underpriced menu items, we built the anomaly detection to err on the side of flagging rather than staying silent. A false positive (flagging a dish that is fine) costs the chef a minute of attention. A false negative (missing a dish that is quietly losing money) costs real margin. The asymmetry matters.
+
+## Ship Small, Measure Hard
+
+The AI features that tend to fail are the ones that try to do everything at once. A single, well-defined capability that can be measured and improved is worth more than a broad AI layer that is hard to evaluate.
+
+Our standard approach: ship the minimum version that is good enough to be useful, measure what users actually do with it, and invest in the next increment based on real usage data rather than assumptions.
+
+With DafonCV's keyword analysis, the first version was simple. It compared the job description terms against the CV terms and flagged gaps. Not sophisticated, but useful immediately and measurable enough to give us the signal we needed to build the next layer: contextual matching that understands synonyms and related terms.
+
+## AI Development at Dafon
+
+Both DafonCV and TechCuisine are live AI applications built by the same team that builds for our clients. They are not prototypes or demos. They are production systems with real users depending on them.
+
+If you are building a product that needs an AI layer, or if you have an AI layer that is not performing the way you expected, we are the right team to talk to. We have made the mistakes and built the evaluation frameworks. The process is grounded in engineering, not hype.
+
+<ProjectCTA url="https://www.dafoncv.com" label="See DafonCV" />
