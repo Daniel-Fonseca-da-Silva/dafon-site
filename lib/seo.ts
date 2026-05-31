@@ -1,0 +1,35 @@
+export const seoConfig = {
+  siteName: "Dafon",
+  defaultTitle: "Dafon | AI Software Development & Website Creation",
+  defaultDescription:
+    "Dafon builds AI-powered applications, custom websites, and scalable software solutions. From idea to production — web apps, SaaS platforms, and enterprise systems tailored to your business.",
+  keywords: [
+    "Dafon",
+    "website creation",
+    "software development",
+    "AI development",
+    "AI applications",
+    "AI-powered applications",
+    "custom software",
+    "web development",
+    "SaaS development",
+    "Next.js",
+    "Golang",
+    "Python",
+    "Daniel Fonseca da Silva",
+    "São Paulo",
+    "Lisboa",
+    "Portugal",
+    "Brazil",
+  ],
+  ecosystemUrls: {
+    dafoncv: "https://www.dafoncv.com",
+    techcuisine: "https://www.techcuisine.online",
+    danielFonseca: "https://www.daniel-fonseca.online",
+  },
+  socialUrls: {
+    linkedin: "https://br.linkedin.com/company/dafon-sistemas",
+    facebook: "https://www.facebook.com/dafonsistemas",
+    github: "https://github.com/Daniel-Fonseca-da-Silva",
+  },
+} as const;

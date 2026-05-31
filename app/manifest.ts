@@ -1,21 +1,21 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
+import { seoConfig } from "@/lib/seo";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Dafon - Innovative Solutions for Your Business',
-    short_name: 'Dafon',
-    description: 'Dafon delivers cutting-edge solutions and exceptional service. Discover how we can transform your business with our innovative approach and expert team.',
-    start_url: '/',
-    display: 'standalone',
-    background_color: '#0a0a0a',
-    theme_color: '#a855f7',
+    name: seoConfig.defaultTitle,
+    short_name: seoConfig.siteName,
+    description: seoConfig.defaultDescription,
+    start_url: "/",
+    display: "standalone",
+    background_color: "#0a0a0a",
+    theme_color: "#a855f7",
     icons: [
       {
-        src: '/icon.png',
-        sizes: 'any',
-        type: 'image/png',
+        src: "/icon.png",
+        sizes: "any",
+        type: "image/png",
       },
     ],
   };
 }
-
