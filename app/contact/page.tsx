@@ -189,7 +189,7 @@ export default function ContactPage() {
                 </motion.span>
               </motion.h2>
               <p className="text-base md:text-lg text-foreground/70 max-w-2xl mx-auto">
-                Have a project in mind? Let's discuss how we can help transform your business.
+                Have a project in mind? Let&apos;s discuss how we can help transform your business.
               </p>
             </motion.div>
 
