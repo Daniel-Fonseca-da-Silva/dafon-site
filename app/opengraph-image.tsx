@@ -50,6 +50,7 @@ export default function HomepageOGImage() {
         {/* Main headline */}
         <div
           style={{
+            display: "flex",
             fontSize: 64,
             fontWeight: 800,
             color: "#ffffff",
