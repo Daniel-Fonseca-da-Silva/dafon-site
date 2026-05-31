@@ -64,7 +64,7 @@ export default function ContactPage() {
 
         if (!siteKey) {
           console.log('sitekey!', siteKey)
-          console.error("TURNSTILE_SITE_KEY is not configured");
+          console.error("NEXT_PUBLIC_TURNSTILE_SITE_KEY is not configured");
           setTurnstileError("Security verification is not configured");
           return;
         }

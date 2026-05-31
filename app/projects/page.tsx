@@ -63,7 +63,7 @@ export default function ProjectsPage() {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12"
+              className="grid gap-6 md:gap-8 lg:gap-12 max-w-2xl mx-auto"
             >
               <motion.article variants={fadeInUp}>
                 <motion.a
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
                   <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer hover:bg-white/10 transition-all">
                     <div className="relative h-64 md:h-80 lg:h-96 bg-linear-to-br from-purple-900/20 to-blue-900/20">
                       <Image
-                        src="/projects/dafoncv-banner.jpg"
+                        src="/projects/dafoncv-banner.png"
                         alt="Dafoncv - AI-powered CV creation platform developed by Dafon"
                         fill
                         className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
@@ -103,44 +103,6 @@ export default function ProjectsPage() {
                 </motion.a>
               </motion.article>
 
-              <motion.article variants={fadeInUp}>
-                <motion.a
-                  href="https://github.com/Daniel-Fonseca-da-Silva/Dafon-PDF-Extractor-API"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="block h-full"
-                >
-                  <Card className="glass-strong border-0 overflow-hidden h-full group cursor-pointer hover:bg-white/10 transition-all">
-                    <div className="relative h-64 md:h-80 lg:h-96 bg-linear-to-br from-purple-900/20 to-blue-900/20">
-                      <Image
-                        src="/projects/dafon-pdf-extractor-api-banner.jpg"
-                        alt="Dafon PDF Extractor API - Python-based PDF data extraction solution for European market"
-                        fill
-                        className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    </div>
-                    <CardHeader>
-                      <CardTitle className="text-xl md:text-2xl text-foreground flex items-center justify-between gap-2">
-                        <h3>Dafon PDF Extractor - Extract data from PDF</h3>
-                        <FaExternalLinkAlt className="text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription className="text-sm md:text-base text-foreground/80 leading-relaxed">
-                        Recognizing a critical need in the European market for robust PDF data processing solutions, Dafon developed 
-                        a comprehensive API built with Python to extract and identify company names, NIFs (Portuguese Tax Identification 
-                        Numbers), and related business data from PDF documents. As a company committed to creating high-quality products 
-                        that adhere to industry standards and best practices, Dafon designed this API with enterprise-grade reliability, 
-                        comprehensive documentation, and complete open access for developers and businesses seeking efficient document 
-                        processing capabilities.
-                      </CardDescription>
-                    </CardContent>
-                  </Card>
-                </motion.a>
-              </motion.article>
             </motion.div>
           </div>
         </section>
