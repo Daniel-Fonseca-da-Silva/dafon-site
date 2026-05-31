@@ -17,11 +17,12 @@ export const Header = () => {
   };
 
   const menuItems = [
-    { href: "/about", label: "About" },
-    { href: "/locations", label: "Locations" },
-    { href: "/partners", label: "Partners" },
-    { href: "/projects", label: "Projects" },
-    { href: "/contact", label: "Contact" },
+    { href: "/#about", label: "About" },
+    { href: "/#locations", label: "Locations" },
+    { href: "/#partners", label: "Partners" },
+    { href: "/#projects", label: "Projects" },
+    { href: "/#contact", label: "Contact" },
+    { href: "/blog", label: "Blog" },
   ];
 
   return (
@@ -32,13 +33,13 @@ export const Header = () => {
         transition={{ duration: 0.5 }}
         className="glass-strong rounded-xl md:rounded-2xl px-4 py-3 md:px-6 md:py-4 max-w-7xl mx-auto flex items-center justify-between"
       >
-        <Link href="/" prefetch={false}>
+        <Link href="/" aria-label="Dafon home">
           <Image
             src="/logo-white.png"
             alt="Dafon Logo"
             width={150}
             height={50}
-            className="h-8 md:h-12 w-auto cursor-pointer"
+            className="h-8 md:h-12 w-auto"
             priority
           />
         </Link>
@@ -83,7 +84,8 @@ export const Header = () => {
               className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
               onClick={closeMobileMenu}
             />
-            
+
+            {/* Menu Panel */}
             <motion.div
               initial={{ opacity: 0, x: "100%" }}
               animate={{ opacity: 1, x: 0 }}
@@ -94,15 +96,9 @@ export const Header = () => {
               <div className="glass-strong rounded-2xl p-6 shadow-2xl">
                 <nav className="flex flex-col gap-4">
                   {menuItems.map((item, index) => (
-                    <motion.div
-                      key={item.href}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1, duration: 0.3 }}
-                    >
+                    <motion.div key={item.href} initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.1, duration: 0.3 }}>
                       <Link
                         href={item.href}
-                        prefetch={false}
                         onClick={closeMobileMenu}
                         className="block text-foreground/80 hover:text-foreground transition-colors font-medium py-3 px-4 rounded-lg hover:bg-white/10 text-lg"
                       >

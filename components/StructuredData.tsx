@@ -1,18 +1,17 @@
 import Script from "next/script";
-
-const defaultDescription = "Dafon delivers cutting-edge solutions and exceptional service. Discover how we can transform your business with our innovative approach and expert team led by CEO Daniel Fonseca da Silva.";
+import { seoConfig } from "@/lib/seo";
 
 const getSiteUrl = (): string => {
   const url = process.env.NEXT_PUBLIC_SITE_URL;
   if (!url) {
-    throw new Error('NEXT_PUBLIC_SITE_URL environment variable is required');
+    throw new Error("NEXT_PUBLIC_SITE_URL environment variable is required");
   }
   return url;
 };
 
-const getStructuredData = () => {
+const getHomepageStructuredData = () => {
   const siteUrl = getSiteUrl();
-  
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -27,10 +26,11 @@ const getStructuredData = () => {
           width: 1200,
           height: 400,
         },
-        description: defaultDescription,
+        description: seoConfig.defaultDescription,
         foundingDate: "2020",
         founder: {
           "@type": "Person",
+          "@id": `${siteUrl}/#person`,
           name: "Daniel Fonseca da Silva",
           jobTitle: "Chief Executive Officer",
         },
@@ -47,22 +47,27 @@ const getStructuredData = () => {
           },
           {
             "@type": "PostalAddress",
+            addressLocality: "Rio de Janeiro",
+            addressCountry: "BR",
+          },
+          {
+            "@type": "PostalAddress",
             addressLocality: "Toronto",
             addressCountry: "CA",
           },
           {
             "@type": "PostalAddress",
-            addressLocality: "Asunción",
-            addressCountry: "PY",
+            addressLocality: "Tallinn",
+            addressCountry: "EE",
           },
         ],
         sameAs: [
-          "https://github.com/Daniel-Fonseca-da-Silva",
-          "https://www.dafoncv.online",
-          "https://www.daniel-fonseca.online",
-          "https://br.linkedin.com/company/dafon-sistemas",
-          "https://www.facebook.com/dafonsistemas",
-          "https://www.instagram.com/dafonsistema",
+          seoConfig.socialUrls.github,
+          seoConfig.socialUrls.linkedin,
+          seoConfig.socialUrls.facebook,
+          seoConfig.ecosystemUrls.dafoncv,
+          seoConfig.ecosystemUrls.techcuisine,
+          seoConfig.ecosystemUrls.danielFonseca,
         ],
         knowsAbout: [
           "Software Development",
@@ -103,37 +108,15 @@ const getStructuredData = () => {
         "@type": "Person",
         "@id": `${siteUrl}/#person`,
         name: "Daniel Fonseca da Silva",
-        alternateName: "Daniel Fonseca",
-        jobTitle: ["Chief Executive Officer", "Chief Technology Officer", "System Architect", "Founder"],
+        jobTitle: "Chief Executive Officer",
+        url: seoConfig.ecosystemUrls.danielFonseca,
         worksFor: {
           "@id": `${siteUrl}/#organization`,
         },
-        url: "https://www.daniel-fonseca.online",
         sameAs: [
-          "https://www.daniel-fonseca.online",
-          "https://www.dafoncv.online",
-          "https://github.com/Daniel-Fonseca-da-Silva",
-          "https://br.linkedin.com/company/dafon-sistemas",
+          seoConfig.ecosystemUrls.danielFonseca,
+          seoConfig.socialUrls.github,
         ],
-        knowsAbout: [
-          "System Architecture",
-          "Software Development",
-          "Golang",
-          "Python",
-          "Java",
-          "Next.js",
-          "React",
-          "TypeScript",
-          "Cloud Computing",
-          "Microservices",
-          "DevOps",
-          "AI Development",
-          "SaaS Development",
-        ],
-        alumniOf: {
-          "@type": "Organization",
-          name: "Dafon",
-        },
         image: {
           "@type": "ImageObject",
           url: `${siteUrl}/company/daniel-fonseca-da-silva-ceo.jpg`,
@@ -174,7 +157,7 @@ const getStructuredData = () => {
         "@id": `${siteUrl}/#website`,
         url: siteUrl,
         name: "Dafon",
-        description: defaultDescription,
+        description: seoConfig.defaultDescription,
         publisher: {
           "@id": `${siteUrl}/#organization`,
         },
@@ -184,32 +167,94 @@ const getStructuredData = () => {
         "@type": "WebPage",
         "@id": `${siteUrl}/#webpage`,
         url: siteUrl,
-        name: "Dafon - Innovative Solutions for Your Business",
-        description: defaultDescription,
+        name: seoConfig.defaultTitle,
+        description: seoConfig.defaultDescription,
         isPartOf: {
           "@id": `${siteUrl}/#website`,
         },
         about: {
           "@id": `${siteUrl}/#organization`,
         },
-        primaryImageOfPage: {
-          "@type": "ImageObject",
-          url: `${siteUrl}/company/daniel-fonseca-da-silva-ceo.jpg`,
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": `${siteUrl}/#service`,
+        name: "Dafon Software Development",
+        url: siteUrl,
+        provider: {
+          "@id": `${siteUrl}/#organization`,
         },
+        serviceType: [
+          "Website Creation",
+          "AI Application Development",
+          "Custom Software Development",
+          "SaaS Development",
+        ],
+        areaServed: [
+          { "@type": "Country", name: "Brazil" },
+          { "@type": "Country", name: "Portugal" },
+          { "@type": "Country", name: "Canada" },
+          { "@type": "Country", name: "Estonia" },
+          { "@type": "Place", name: "Global" },
+        ],
+        description: seoConfig.defaultDescription,
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${siteUrl}/#products`,
+        name: "Dafon Products",
+        description: "AI-powered SaaS products built and maintained by Dafon.",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+              "@type": "SoftwareApplication",
+              "@id": `${seoConfig.ecosystemUrls.dafoncv}/#app`,
+              name: "DafonCV",
+              url: seoConfig.ecosystemUrls.dafoncv,
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "Web",
+              description:
+                "AI-powered resume platform that analyses CVs against job descriptions, improves ATS match scores, and standardises candidate profiles for consulting firms.",
+              creator: {
+                "@id": `${siteUrl}/#organization`,
+              },
+            },
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            item: {
+              "@type": "SoftwareApplication",
+              "@id": `${seoConfig.ecosystemUrls.techcuisine}/#app`,
+              name: "TechCuisine",
+              url: seoConfig.ecosystemUrls.techcuisine,
+              applicationCategory: "BusinessApplication",
+              operatingSystem: "Web",
+              description:
+                "AI-powered food cost and recipe management platform for restaurants and professional kitchens, with menu engineering, yield tracking, and supplier price automation.",
+              creator: {
+                "@id": `${siteUrl}/#organization`,
+              },
+            },
+          },
+        ],
       },
     ],
   };
 };
 
-export const StructuredData = () => {
-  const structuredData = getStructuredData();
-  
+export const HomepageStructuredData = () => {
+  const data = getHomepageStructuredData();
   return (
     <Script
-      id="structured-data"
+      id="homepage-structured-data"
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
   );
 };
 
+// Keep named export for any legacy imports
+export { HomepageStructuredData as StructuredData };

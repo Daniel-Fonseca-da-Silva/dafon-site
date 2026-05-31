@@ -64,33 +64,33 @@ export const CompanyModal = ({ isOpen, onClose }: CompanyModalProps) => {
                   </h3>
                   <div className="space-y-4 text-foreground/90 leading-relaxed">
                     <p>
-                      Dafon was founded with a vision to transform businesses through innovative technology solutions 
-                      and strategic consulting. From our humble beginnings, we have grown into a trusted partner for 
-                      organisations seeking to navigate the complexities of the digital age and achieve sustainable growth.
+                      Dafon was founded with a vision to transform businesses through AI software development,
+                      custom website creation, and scalable software solutions. From our beginnings, we have grown
+                      into a trusted partner for organisations seeking production-ready systems that drive measurable results.
                     </p>
                     <p>
-                      Our journey began with a simple yet powerful mission: to deliver exceptional value to our clients 
-                      by combining cutting-edge technology with deep industry expertise. Over the years, we have 
-                      expanded our presence across multiple continents, establishing offices in São Paulo, Lisboa, 
-                      and strategic partnerships in Canada and Toronto.
+                      Our journey began with a focused mission: to close the gap between what technology can do and
+                      what most businesses actually have access to. We specialise in AI-powered applications, SaaS
+                      platforms, and enterprise software — built with Golang, Next.js, and Python, from idea to launch.
+                      Over the years, we have expanded our presence across multiple continents, with teams in Brazil,
+                      Portugal, Canada, and Estonia.
                     </p>
                     <p>
-                      At the heart of Dafon lies our commitment to excellence, innovation, and client success. We 
-                      believe that every business, regardless of size or industry, deserves access to world-class 
-                      solutions that drive real results. This philosophy has guided our growth and shaped our approach 
-                      to every project we undertake.
+                      At the heart of Dafon lies our commitment to shipping software that works. Every project —
+                      whether a new website, an AI application, or a full software platform — is built to production
+                      standards from day one. We believe that every business deserves access to the same calibre of
+                      engineering that powers the world&apos;s best products.
                     </p>
                     <p>
-                      Today, Dafon stands as a leader in delivering transformative business solutions. Our team of 
-                      experts brings together diverse perspectives and deep technical knowledge to solve complex 
-                      challenges and unlock new opportunities for our clients. We pride ourselves on building lasting 
-                      relationships based on trust, transparency, and mutual success.
+                      Today, Dafon ships its own products alongside client work. DafonCV is an AI resume platform
+                      active across European and Latin American markets. TechCuisine is a food cost and recipe
+                      management platform for professional kitchens. Both are built and maintained by the same
+                      team that builds for our clients — so every tool we recommend, we use ourselves.
                     </p>
                     <p>
-                      As we look to the future, Dafon remains committed to staying at the forefront of technological 
-                      innovation whilst maintaining our core values of integrity, excellence, and client-centricity. 
-                      We continue to invest in our people, our processes, and our partnerships to ensure we can deliver 
-                      the best possible outcomes for the businesses we serve.
+                      As we look to the future, Dafon remains committed to staying at the forefront of AI development
+                      and software engineering whilst maintaining our core values of quality, transparency, and
+                      long-term client partnerships.
                     </p>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ export const CompanyModal = ({ isOpen, onClose }: CompanyModalProps) => {
                   </h3>
                   <div className="space-y-4 text-foreground/90 leading-relaxed">
                     <p>
-                      Daniel Fonseca da Silva has built an impressive career spanning more than two decades in systems engineering, innovation, and business leadership. His professional journey began in the field of information systems, where he developed deep technical expertise and a strategic vision for how technology can drive business transformation. With a solid background in engineering and system development many projects designed and implemented under his direct guidance, Daniel has established himself as a leader who seamlessly combines technical excellence with forward-thinking strategy.
+                      Daniel Fonseca da Silva has built an impressive career spanning more than two decades in systems architecture, innovation and business leadership. His professional journey began in the field of information systems, where he developed deep technical expertise and a strategic vision for how technology can drive business transformation. With a solid background in architecture and system development many projects designed and implemented under his direct guidance, Daniel has established himself as a leader who seamlessly combines technical excellence with forward-thinking strategy.
                     </p>
                     <p>
                       As the CEO of Dafon, Daniel is now at the forefront of the company&apos;s strategic direction, overseeing its evolution and ensuring that technological innovation remains at the heart of all operations. Throughout his career, he has demonstrated exceptional ability to identify opportunities and turn challenges into strategic advantages. He has led numerous successful initiatives that have driven significant growth and innovation across various sectors, from technology to consulting and beyond.
