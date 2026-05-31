@@ -69,41 +69,15 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: "/humans.txt",
+        source: "/feed.xml",
         headers: [
           {
             key: "Content-Type",
-            value: "text/plain; charset=utf-8",
+            value: "application/rss+xml; charset=utf-8",
           },
           {
             key: "Cache-Control",
             value: "public, max-age=3600, stale-while-revalidate",
-          },
-        ],
-      },
-      {
-        source: "/security.txt",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "text/plain; charset=utf-8",
-          },
-          {
-            key: "Cache-Control",
-            value: "public, max-age=86400, stale-while-revalidate",
-          },
-        ],
-      },
-      {
-        source: "/.well-known/security.txt",
-        headers: [
-          {
-            key: "Content-Type",
-            value: "text/plain; charset=utf-8",
-          },
-          {
-            key: "Cache-Control",
-            value: "public, max-age=86400, stale-while-revalidate",
           },
         ],
       },

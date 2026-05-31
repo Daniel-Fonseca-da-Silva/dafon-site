@@ -898,7 +898,7 @@ alternates: {
     <h3>Daniel Fonseca da Silva</h3>
   <h2>Our Locations</h2>
   <h2>Our Projects</h2>
-    <h3>Dafoncv - Creation customized CV With AI</h3>
+    <h3>DafonCV - Creation customized CV With AI</h3>
 ```
 
 **Semantic Elements:**
@@ -1049,7 +1049,7 @@ dafon-site/
 │   │   └── sao-paulo-center.jpg
 │   ├── projects/                 # Project images
 │   │   ├── dafon-pdf-extractor-api-banner.jpg
-│   │   └── dafoncv-banner.jpg
+│   │   └── dafoncv-banner.png
 │   ├── logo-dark.png
 │   └── logo-white.png
 │
