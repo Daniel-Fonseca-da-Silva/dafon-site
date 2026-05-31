@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { siteUrl, siteName } from "@/lib/site";
+import { seoConfig } from "@/lib/seo";
 import { BlogPostCard } from "@/components/blog/BlogPostCard";
 import { BlogStructuredData } from "@/components/blog/BlogStructuredData";
 
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     images: [
       {
-        url: `${siteUrl}/blog/opengraph-image`,
+        url: seoConfig.ogImages.blog,
         width: 1200,
         height: 630,
         alt: `${title} | ${siteName}`,
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${title} | ${siteName}`,
     description,
-    images: [`${siteUrl}/blog/opengraph-image`],
+    images: [seoConfig.ogImages.blog],
   },
 };
 

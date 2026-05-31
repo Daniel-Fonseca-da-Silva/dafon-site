@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     description: seoConfig.defaultDescription,
     images: [
       {
-        url: `${siteUrl}/logo-white.png`,
+        url: seoConfig.ogImages.default,
         width: 1200,
         height: 630,
         alt: "Dafon AI Software Development & Website Creation",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: seoConfig.defaultTitle,
     description: seoConfig.defaultDescription,
-    images: [`${siteUrl}/logo-white.png`],
+    images: [seoConfig.ogImages.default],
     creator: "@dafon",
   },
   alternates: {

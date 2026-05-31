@@ -32,4 +32,8 @@ export const seoConfig = {
     facebook: "https://www.facebook.com/dafonsistemas",
     github: "https://github.com/Daniel-Fonseca-da-Silva",
   },
+  ogImages: {
+    default: "/logo-white.png",
+    blog: "/projects/dafoncv-banner.png",
+  },
 } as const;
